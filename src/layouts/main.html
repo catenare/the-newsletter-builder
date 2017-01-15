@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{root}}css/app.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>*|MC:SUBJECT|*</title>
+    <!-- <style> -->
+</head>
+
+<body>
+<wrapper>
+    <container class="top-header">
+    <row>
+        <columns small="7">
+            <p>
+                Life as I know it may have changed, but the one thing I am certain of is God remains the same.
+            </p>
+        </columns>
+        <columns small="5">
+            <p class="text-right">
+                <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                <span>Email not displaying correctly?
+                <a href="*|ARCHIVE|*">View it in your browser.</a></span>
+                <!-- *|END:IF|* -->
+            </p>
+        </columns>
+    </row>
+    <row>
+        <center>
+            <menu>
+                <item href="*|FORWARD|*">Forward to Friend</item>
+                <item href="*|FACEBOOK:PROFILEURL|*">Friend on Facebook</item>
+                <item href="*|TWITTER:PROFILEURL|*">Follow on Twitter</item>
+            </menu>
+        </center>
+    </row>
+</container>
+</wrapper>
+<container class="head-mast">
+    <h1 class="text-center">The Martin Family</h1>
+</container>
+<container>
+    {{> body}}
+</container>
+<container>
+    <row>
+        <columns>
+
+            <p>*|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|* *|END:IF|*</p>
+        </columns>
+    </row>
+    <row>
+        <p class="text-center">*|MC:SHARE|*</p>
+    </row>
+    <row>
+        <columns small="12" large="6">
+            <strong>Our mailing address is:</strong>
+            <br>*|HTML:LIST_ADDRESS_HTML|*
+            <menu class="vertical collapsed">
+                <item href="mailto: sheriffa@martinsonline.org">sheriffa@martinsonline.org</item>
+                <item href="tel:+27116721216">Phone: +27 11 672 1216</item>
+            </menu>
+        </columns>
+        <columns small="12" large="6">
+            <menu class="vertical collapsed">
+                <item href="*|UPDATE_PROFILE|*">update your preferences</item>
+                <item href="*|UNSUB|*">unsubscribe from this list</item>
+            </menu>
+        </columns>
+    </row>
+
+    <row class="collapsed footer">
+        <p class="text-center">
+            <em>Copyright &copy;
+                *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights
+                reserved.</em><br>
+            *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
+        </p>
+    </row>
+</container>
+
+<!-- prevent Gmail on iOS font size manipulation -->
+<div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+</body>
+</html>

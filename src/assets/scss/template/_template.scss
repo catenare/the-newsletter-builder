@@ -2,58 +2,131 @@
 // Feel free to remove these styles for production!
 
 // Body Styles 
-body,
-html, 
-.body {
-  background: #f3f3f3 !important;
+//body,
+//html,
+//.body {
+//  background: #f3f3f3 !important;
+//}
+//
+//.container.header {
+//  background: #f3f3f3;
+//}
+//
+//.body-drip {
+//  border-top: 8px solid #663399;
+//}
+//
+//// Full Width Headers
+//.header {
+//  background: #8a8a8a;
+//}
+//
+//.header .columns {
+//  padding-bottom: 0;
+//}
+//
+//.header p {
+//  color: #fff;
+//  padding-top: 15px;
+//}
+//
+//.header .wrapper-inner {
+//  padding: 20px;
+//}
+//
+//.header .container {
+//  background: transparent;
+//}
+//
+//// Social Media
+//table.button.facebook table td {
+//  background: #3B5998 !important;
+//  border-color: #3B5998;
+//}
+//
+//table.button.twitter table td {
+//  background: #1daced !important;
+//  border-color: #1daced;
+//}
+//
+//table.button.google table td {
+//  background: #DB4A39 !important;
+//  border-color: #DB4A39;
+//}
+//
+//.wrapper.secondary {
+//  background: #f3f3f3;
+//}
+
+body {
+  background-color: #999;
 }
 
-.container.header {
-  background: #f3f3f3;
+//table.container {
+//  max-width: 100%;
+//}
+
+
+h1 {
+  color: #404040 !important;
+  font-weight: bold;
+  display: block;
+  font-size: 46px;
 }
 
-.body-drip {
-  border-top: 8px solid #663399;
+.wrapper .top-header, .main-content {
+  border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 10px;
 }
 
-// Full Width Headers
-.header {
-  background: #8a8a8a;
+.wrapper .top-header {
+  background-color: #e3e3e3;
 }
 
-.header .columns {
-  padding-bottom: 0;
+.wrapper .top-header p{
+  padding: 10px 20px;
+  font-size: 13px;
+  line-height: 125%;
+  color: #808080;
 }
 
-.header p {
-  color: #fff;
-  padding-top: 15px;
+h4 {
+  color: #404040 !important;
+  display: block;
+  font-family: Helvetica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 100%;
+  letter-spacing: normal;
+  margin-top: 5px;
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-left: 0;
+  text-align: left;
 }
 
-.header .wrapper-inner {
-  padding: 20px;
+table.menu.vertical.collapsed th.menu-item{
+  padding: 0;
+  text-transform: capitalize;
 }
 
-.header .container {
-  background: transparent;
+.callout span.caption {
+  color: #808080 !important;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 12px;
+  padding-top: 5px;
+
 }
 
-// Social Media
-table.button.facebook table td {
-  background: #3B5998 !important;
-  border-color: #3B5998;
+p.date-item {
+  font-weight: bold;
 }
 
-table.button.twitter table td {
-  background: #1daced !important;
-  border-color: #1daced;
-}
-
-table.button.google table td {
-  background: #DB4A39 !important;
-  border-color: #DB4A39;
-}
-
-.wrapper.secondary {
-  background: #f3f3f3;
+img {
+  width: 95%;
+  max-width: 100%;
 }

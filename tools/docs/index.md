@@ -8,23 +8,23 @@
 
 ## Process
 * Rationale
-  * **zurb-foundation** branch follow **zurb foundation** repository
-  * **master** branch is stable/production branch
+    * **zurb-foundation** branch follow **zurb foundation** repository
+    * **master** branch is stable/production branch
 * Process
-  1. Create new working branch
-    * `git checkout master`
-    * `git checkout -b april2017`
-  1. Pull all changes from the `zurb foundation` into my `zurb-foundation` branch.
-    * `git checkout zurb-foundation`
-    * `git pull zurb master`
-  1. Pull changes from `zurb-foundation` branch into `april2017` branch
-    * `git checkout april2017`
-    * `git merge zurb-foundation`
-  * Complete the newsletter and merge back to master
-    * `git checkout master`
-    * `git merge april2017`
-  * Push all changes to github
-    * `git push origin --all`
+   1. Create new working branch
+      * `git checkout master`
+      * `git checkout -b april2017`
+   1. Pull all changes from the `zurb foundation` into my `zurb-foundation` branch.
+      * `git checkout zurb-foundation`
+      * `git pull zurb master`
+   1. Pull changes from `zurb-foundation` branch into `april2017` branch
+      * `git checkout april2017`
+      * `git merge zurb-foundation`
+   1. Complete the newsletter and merge back to master
+      * `git checkout master`
+      * `git merge april2017`
+   1. Push all changes to github
+      * `git push origin --all`
 
 ## Creating/updating the newsletter
 1. Create new branch from master

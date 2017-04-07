@@ -38,3 +38,7 @@
 * Save word document as text to **newsletter/txt** folder
 * Run `npm start` to run development server 
 * Edit files in source
+
+## Additional Resources
+* **tools/snippets.html** - snippets of code I have previously used.
+ 

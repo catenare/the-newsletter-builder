@@ -8,8 +8,11 @@
   * [MkDocs](http://www.mkdocs.org) for documentation.
 
 ## Git Branches
-* *master* - tracking the zurb foundation master branch
-* *default* - merge changes from master to this branch. Also changes from the latest newsletter.
+* *zurb-foundation* - tracking the zurb foundation master branch
+  * To update:
+    1. `git checkout zurb-foundation`
+    1. `git pull zurb master`
+* *master* - latest code for the newsletter. Assume to be working.
 * *april2017* - current newsletter being worked on.
 
 ## Setting up project

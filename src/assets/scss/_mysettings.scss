@@ -1,3 +1,4 @@
+
 ////  Foundation for Emails Settings
 ////  ------------------------------
 ////
@@ -27,7 +28,7 @@
 //$black: #0a0a0a;
 //$white: #fefefe;
 //$pre-color: #ff6908;
-//$global-width: 600px;
+$global-width: 640px;
 //$global-width-small: 95%;
 //$global-gutter: 16px;
 //$body-background: $light-gray;
@@ -118,7 +119,7 @@ $body-font-family: 'Raleway', Helvetica, Arial, Verdana, Trebuchet MS, sans-seri
 //// 6. Callout
 //// ----------
 //
-//$callout-background: $white;
+//$callout-background: $dark-gray;
 //$callout-background-fade: 85%;
 //$callout-padding: 10px;
 //$callout-margin-bottom: $global-margin;
@@ -145,3 +146,5 @@ $body-font-family: 'Raleway', Helvetica, Arial, Verdana, Trebuchet MS, sans-seri
 //$thumbnail-transition: box-shadow 200ms ease-out;
 //$thumbnail-radius: $global-radius;
 //
+
+//$blockquote-border: $dark-gray;

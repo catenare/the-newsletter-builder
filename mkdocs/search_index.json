@@ -1,0 +1,99 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Newsletter Building\n\n\nChange to the newsletter work folder\n\n\n\n\nNewsletter folder is python virtual environment\n\n\nUsing mkdocs to track documentation\n\n\nworkon newsletter\n - gets you going\n\n\n\n\nProcess\n\n\n\n\nUpdating the default branch\n\n\nUpdate \ndefault\n branch with \n{last newsletter}\n branch\n\n\ngit checkout default\n\n\ngit pull feb2017\n\n\n\n\n\n\nPull all changes from the \nzurb foundation\n branch into my \nmaster\n branch.\n\n\ngit checkout master\n\n\ngit pull {zurb foundation}\n\n\n\n\n\n\nPull changes from \nmaster\n branch into \ndefault\n branch\n\n\ngit checkout default\n\n\ngit pull master\n\n\n\n\n\n\nCreate new branch from \ndefault\n\n\ngit checkout default\n\n\ngit checkout -b april2017\n\n\n\n\n\n\n\n\nCreating/updating the newsletter\n\n\n\n\nSave word document as text to \nnewsletter/txt\n folder\n\n\nRun \nnpm start\n to run development server",
+            "title": "Home"
+        },
+        {
+            "location": "/#newsletter-building",
+            "text": "",
+            "title": "Newsletter Building"
+        },
+        {
+            "location": "/#change-to-the-newsletter-work-folder",
+            "text": "Newsletter folder is python virtual environment  Using mkdocs to track documentation  workon newsletter  - gets you going",
+            "title": "Change to the newsletter work folder"
+        },
+        {
+            "location": "/#process",
+            "text": "Updating the default branch  Update  default  branch with  {last newsletter}  branch  git checkout default  git pull feb2017    Pull all changes from the  zurb foundation  branch into my  master  branch.  git checkout master  git pull {zurb foundation}    Pull changes from  master  branch into  default  branch  git checkout default  git pull master    Create new branch from  default  git checkout default  git checkout -b april2017",
+            "title": "Process"
+        },
+        {
+            "location": "/#creatingupdating-the-newsletter",
+            "text": "Save word document as text to  newsletter/txt  folder  Run  npm start  to run development server",
+            "title": "Creating/updating the newsletter"
+        },
+        {
+            "location": "/tools/foundation for emails/",
+            "text": "Foundation for Emails Template\n\n\n\n\nPlease open all issues with this template on the main \nFoundation for Emails\n repo.\n\n\nThis is the official starter project for \nFoundation for Emails\n, a framework for creating responsive HTML devices that work in any email client. It has a Gulp-powered build system with these features:\n\n\n\n\nHandlebars HTML templates with \nPanini\n\n\nSimplified HTML email syntax with \nInky\n\n\nSass compilation\n\n\nImage compression\n\n\nBuilt-in BrowserSync server\n\n\nFull email inlining process\n\n\n\n\nInstallation\n\n\nTo use this template, your computer needs \nNode.js\n 0.12 or greater. The template can be installed with the Foundation CLI, or downloaded and set up manually.\n\n\nUsing the CLI\n\n\nInstall the Foundation CLI with this command:\n\n\nnpm install foundation-cli --global\n\n\n\n\nUse this command to set up a blank Foundation for Emails project:\n\n\nfoundation new --framework emails\n\n\n\n\nThe CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.\n\n\nManual Setup\n\n\nTo manually set up the template, first download it with Git:\n\n\ngit clone https://github.com/zurb/foundation-emails-template projectname\n\n\n\n\nThen open the folder in your command line, and install the needed dependencies:\n\n\ncd projectname\nnpm install\n\n\n\n\nBuild Commands\n\n\nRun \nnpm start\n to kick off the build process. A new browser tab will open with a server pointing to your project files.\n\n\nRun \nnpm run build\n to inline your CSS into your HTML along with the rest of the build process.\n\n\nRun \nnpm run litmus\n to build as above, then submit to litmus for testing. \nAWS S3 Account details required (config.json)\n\n\nRun \nnpm run mail\n to build as above, then send to specified email address for testing. \nSMTP server details required (config.json)\n\n\nRun \nnpm run zip\n to build as above, then zip HTML and images for easy deployment to email marketing services. \n\n\nLitmus Tests (config.json)\n\n\nTesting in Litmus requires the images to be hosted publicly. The provided gulp task handles this by automating hosting to an AWS S3 account. Provide your Litmus and AWS S3 account details in the \nexample.config.json\n and then rename to \nconfig.json\n. Litmus config, and \naws.url\n are required, however if you follow the \naws-sdk suggestions\n you don't need to supply the AWS credentials into this JSON.\n\n\n{\n  \"aws\": {\n    \"region\": \"us-east-1\",\n    \"accessKeyId\": \"YOUR_ACCOUNT_KEY\",\n    \"secretAccessKey\": \"YOUR_ACCOUNT_SECRET\",\n    \"params\": {\n        \"Bucket\": \"elasticbeanstalk-us-east-1-THIS_IS_JUST_AN_EXAMPLE\"\n    },\n    \"url\": \"https://s3.amazonaws.com/elasticbeanstalk-us-east-1-THIS_IS_JUST_AN_EXAMPLE\"\n  },\n  \"litmus\": {\n    \"username\": \"YOUR_LITMUS@EMAIL.com\",\n    \"password\": \"YOUR_ACCOUNT_PASSWORD\",\n    \"url\": \"https://YOUR_ACCOUNT.litmus.com\",\n    \"applications\": [\"ol2003\",\"ol2007\",\"ol2010\",\"ol2011\",\"ol2013\",\"chromegmailnew\",\"chromeyahoo\",\"appmail9\",\"iphone5s\",\"ipad\",\"android4\",\"androidgmailapp\"]\n  }\n}\n\n\n\n\nManual email tests (config.json)\n\n\nSimilar to the Litmus tests, you can have the emails sent to a specified email address. Just like with the Litmus tests, you will need to provide AWS S3 account details in \nconfig.json\n. You will also need to specify to details of an SMTP server. The email address to send to emails to can either by configured in the \npackage.json\n file or added as a parameter like so: \nnpm run mail -- --to=\"example.com\"\n\n\n{\n  \"aws\": {\n    \"region\": \"us-east-1\",\n    \"accessKeyId\": \"YOUR_ACCOUNT_KEY\",\n    \"secretAccessKey\": \"YOUR_ACCOUNT_SECRET\",\n    \"params\": {\n        \"Bucket\": \"elasticbeanstalk-us-east-1-THIS_IS_JUST_AN_EXAMPLE\"\n    },\n    \"url\": \"https://s3.amazonaws.com/elasticbeanstalk-us-east-1-THIS_IS_JUST_AN_EXAMPLE\"\n  },\n  \"mail\": {\n    \"to\": [\n      \"example@domain.com\"\n    ],\n    \"from\": \"Company name <info@company.com\",\n    \"smtp\": {\n      \"auth\": {\n        \"user\": \"example@domain.com\",\n        \"pass\": \"12345678\"\n      },\n      \"host\": \"smtp.domain.com\",\n      \"secureConnection\": true,\n      \"port\": 465\n    }\n  }\n}\n\n\n\n\nFor a full list of Litmus' supported test clients(applications) see their \nclient list\n.\n\n\nCaution:\n AWS Service Fees will result, however, are usually very low do to minimal traffic. Use at your own discretion.\n\n\nfragrancex",
+            "title": "Foundation for emails"
+        },
+        {
+            "location": "/tools/foundation for emails/#foundation-for-emails-template",
+            "text": "Please open all issues with this template on the main  Foundation for Emails  repo.  This is the official starter project for  Foundation for Emails , a framework for creating responsive HTML devices that work in any email client. It has a Gulp-powered build system with these features:   Handlebars HTML templates with  Panini  Simplified HTML email syntax with  Inky  Sass compilation  Image compression  Built-in BrowserSync server  Full email inlining process",
+            "title": "Foundation for Emails Template"
+        },
+        {
+            "location": "/tools/foundation for emails/#installation",
+            "text": "To use this template, your computer needs  Node.js  0.12 or greater. The template can be installed with the Foundation CLI, or downloaded and set up manually.",
+            "title": "Installation"
+        },
+        {
+            "location": "/tools/foundation for emails/#using-the-cli",
+            "text": "Install the Foundation CLI with this command:  npm install foundation-cli --global  Use this command to set up a blank Foundation for Emails project:  foundation new --framework emails  The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.",
+            "title": "Using the CLI"
+        },
+        {
+            "location": "/tools/foundation for emails/#manual-setup",
+            "text": "To manually set up the template, first download it with Git:  git clone https://github.com/zurb/foundation-emails-template projectname  Then open the folder in your command line, and install the needed dependencies:  cd projectname\nnpm install",
+            "title": "Manual Setup"
+        },
+        {
+            "location": "/tools/foundation for emails/#build-commands",
+            "text": "Run  npm start  to kick off the build process. A new browser tab will open with a server pointing to your project files.  Run  npm run build  to inline your CSS into your HTML along with the rest of the build process.  Run  npm run litmus  to build as above, then submit to litmus for testing.  AWS S3 Account details required (config.json)  Run  npm run mail  to build as above, then send to specified email address for testing.  SMTP server details required (config.json)  Run  npm run zip  to build as above, then zip HTML and images for easy deployment to email marketing services.",
+            "title": "Build Commands"
+        },
+        {
+            "location": "/tools/foundation for emails/#litmus-tests-configjson",
+            "text": "Testing in Litmus requires the images to be hosted publicly. The provided gulp task handles this by automating hosting to an AWS S3 account. Provide your Litmus and AWS S3 account details in the  example.config.json  and then rename to  config.json . Litmus config, and  aws.url  are required, however if you follow the  aws-sdk suggestions  you don't need to supply the AWS credentials into this JSON.  {\n  \"aws\": {\n    \"region\": \"us-east-1\",\n    \"accessKeyId\": \"YOUR_ACCOUNT_KEY\",\n    \"secretAccessKey\": \"YOUR_ACCOUNT_SECRET\",\n    \"params\": {\n        \"Bucket\": \"elasticbeanstalk-us-east-1-THIS_IS_JUST_AN_EXAMPLE\"\n    },\n    \"url\": \"https://s3.amazonaws.com/elasticbeanstalk-us-east-1-THIS_IS_JUST_AN_EXAMPLE\"\n  },\n  \"litmus\": {\n    \"username\": \"YOUR_LITMUS@EMAIL.com\",\n    \"password\": \"YOUR_ACCOUNT_PASSWORD\",\n    \"url\": \"https://YOUR_ACCOUNT.litmus.com\",\n    \"applications\": [\"ol2003\",\"ol2007\",\"ol2010\",\"ol2011\",\"ol2013\",\"chromegmailnew\",\"chromeyahoo\",\"appmail9\",\"iphone5s\",\"ipad\",\"android4\",\"androidgmailapp\"]\n  }\n}",
+            "title": "Litmus Tests (config.json)"
+        },
+        {
+            "location": "/tools/foundation for emails/#manual-email-tests-configjson",
+            "text": "Similar to the Litmus tests, you can have the emails sent to a specified email address. Just like with the Litmus tests, you will need to provide AWS S3 account details in  config.json . You will also need to specify to details of an SMTP server. The email address to send to emails to can either by configured in the  package.json  file or added as a parameter like so:  npm run mail -- --to=\"example.com\"  {\n  \"aws\": {\n    \"region\": \"us-east-1\",\n    \"accessKeyId\": \"YOUR_ACCOUNT_KEY\",\n    \"secretAccessKey\": \"YOUR_ACCOUNT_SECRET\",\n    \"params\": {\n        \"Bucket\": \"elasticbeanstalk-us-east-1-THIS_IS_JUST_AN_EXAMPLE\"\n    },\n    \"url\": \"https://s3.amazonaws.com/elasticbeanstalk-us-east-1-THIS_IS_JUST_AN_EXAMPLE\"\n  },\n  \"mail\": {\n    \"to\": [\n      \"example@domain.com\"\n    ],\n    \"from\": \"Company name <info@company.com\",\n    \"smtp\": {\n      \"auth\": {\n        \"user\": \"example@domain.com\",\n        \"pass\": \"12345678\"\n      },\n      \"host\": \"smtp.domain.com\",\n      \"secureConnection\": true,\n      \"port\": 465\n    }\n  }\n}  For a full list of Litmus' supported test clients(applications) see their  client list .  Caution:  AWS Service Fees will result, however, are usually very low do to minimal traffic. Use at your own discretion.",
+            "title": "Manual email tests (config.json)"
+        },
+        {
+            "location": "/tools/foundation for emails/#fragrancex",
+            "text": "",
+            "title": "fragrancex"
+        },
+        {
+            "location": "/tools/setup/",
+            "text": "Setup\n\n\nProject Config\n\n\n\n\nUsing \nZurb Foundation for Emails\n as the template\n\n\nNewsletter is sent via \nMailchimp\n.\n\n\nDocumentation is in \ntools\\\n\n\nUsing Python virtual environment (\nworkon newsletter\n)\n\n\nMkDocs\n for documentation.\n\n\n\n\nGit Branches\n\n\n\n\nmaster\n - tracking the zurb foundation master branch\n\n\ndefault\n - merge changes from master to this branch. Also changes from the latest newsletter.\n\n\napril2017\n - current newsletter being worked on.\n\n\n\n\nSetting up project\n\n\n\n\ngit clone https://github.com/catenare/newsletter-builder newsletter\n\n\nnpm install\n - install node modules\n\n\nmkvirtualenv -a . newsletter\n - setup python virtual environment\n\n\npip install -r requirements.txt\n - install python modules for doing the documentaiton\n\n\nnpm start\n - start the development server",
+            "title": "Setup"
+        },
+        {
+            "location": "/tools/setup/#setup",
+            "text": "",
+            "title": "Setup"
+        },
+        {
+            "location": "/tools/setup/#project-config",
+            "text": "Using  Zurb Foundation for Emails  as the template  Newsletter is sent via  Mailchimp .  Documentation is in  tools\\  Using Python virtual environment ( workon newsletter )  MkDocs  for documentation.",
+            "title": "Project Config"
+        },
+        {
+            "location": "/tools/setup/#git-branches",
+            "text": "master  - tracking the zurb foundation master branch  default  - merge changes from master to this branch. Also changes from the latest newsletter.  april2017  - current newsletter being worked on.",
+            "title": "Git Branches"
+        },
+        {
+            "location": "/tools/setup/#setting-up-project",
+            "text": "git clone https://github.com/catenare/newsletter-builder newsletter  npm install  - install node modules  mkvirtualenv -a . newsletter  - setup python virtual environment  pip install -r requirements.txt  - install python modules for doing the documentaiton  npm start  - start the development server",
+            "title": "Setting up project"
+        }
+    ]
+}

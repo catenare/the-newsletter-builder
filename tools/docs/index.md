@@ -40,6 +40,7 @@
 * Edit files in source
 * Run `npm run zip`
   * Create zip file for MailChimp
+* Upload file to [MailChimp](https://mailchimp.com)
 
 ## Additional Resources
 * **tools/snippets.html** - snippets of code I have previously used.

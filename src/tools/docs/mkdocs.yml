@@ -1,0 +1,11 @@
+site_name: The Martins Newsletter
+site_description: The Martin Family newsletter generator instructions
+repo_url: https://github.com/catenare/newsletter-builder
+repo_name: 'GitHub'
+edit_uri: edit/master/tools/docs
+site_author: Johan N. Martin (http://www.johan-martin.com)
+copyright: The Martins &copy; 2017
+markdown_extensions:
+  - pymdownx.tilde
+  - markdown.extensions.def_list
+theme: 'material'

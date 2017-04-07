@@ -7,18 +7,20 @@
 
 
 ## Process
+* Rationale
+  * **zurb-foundation** branch follow **zurb foundation** repository
 * Updating the default branch
-  * Update `default` branch with `{last newsletter}` branch
-    * `git checkout default`
-    * `git pull feb2017`
-  * Pull all changes from the `zurb foundation` branch into my `master` branch.
+  * Update `master` branch with `{last newsletter}` branch
     * `git checkout master`
+    * `git merge feb2017`
+  * Pull all changes from the `zurb foundation` branch into my `zurb-foundation` branch.
+    * `git checkout zurb-foundation`
     * `git pull {zurb foundation}`
-  * Pull changes from `master` branch into `default` branch
-    * `git checkout default`
-    * `git pull master`
-  * Create new branch from `default`
-    * `git checkout default`
+  * Pull changes from `zurb-foundation` branch into `master` branch
+    * `git checkout master`
+    * `git merge zurb-foundation`
+  * Create new branch from `master`
+    * `git checkout master`
     * `git checkout -b april2017`
 
 ## Creating/updating the newsletter

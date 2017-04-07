@@ -232,6 +232,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#creating-newsletter" title="Creating newsletter" class="md-nav__link">
+    Creating newsletter
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -330,6 +337,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#creating-newsletter" title="Creating newsletter" class="md-nav__link">
+    Creating newsletter
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -356,32 +370,51 @@
 </ul>
 <h2 id="process">Process</h2>
 <ul>
-<li>Updating the default branch</li>
-<li>Update <code>default</code> branch with <code>{last newsletter}</code> branch<ul>
-<li><code>git checkout default</code></li>
-<li><code>git pull feb2017</code></li>
+<li>Rationale<ul>
+<li><strong>zurb-foundation</strong> branch follow <strong>zurb foundation</strong> repository</li>
+<li><strong>master</strong> branch is stable/production branch</li>
 </ul>
 </li>
-<li>Pull all changes from the <code>zurb foundation</code> branch into my <code>master</code> branch.<ul>
+<li>Process</li>
+<li>Create new working branch<ul>
 <li><code>git checkout master</code></li>
-<li><code>git pull {zurb foundation}</code></li>
-</ul>
-</li>
-<li>Pull changes from <code>master</code> branch into <code>default</code> branch<ul>
-<li><code>git checkout default</code></li>
-<li><code>git pull master</code></li>
-</ul>
-</li>
-<li>Create new branch from <code>default</code><ul>
-<li><code>git checkout default</code></li>
 <li><code>git checkout -b april2017</code></li>
+</ul>
+</li>
+<li>Pull all changes from the <code>zurb foundation</code> into my <code>zurb-foundation</code> branch.<ul>
+<li><code>git checkout zurb-foundation</code></li>
+<li><code>git pull zurb master</code></li>
+</ul>
+</li>
+<li>Pull changes from <code>zurb-foundation</code> branch into <code>april2017</code> branch<ul>
+<li><code>git checkout april2017</code></li>
+<li><code>git merge zurb-foundation</code></li>
+</ul>
+</li>
+<li>Complete the newsletter and merge back to master<ul>
+<li><code>git checkout master</code></li>
+<li><code>git merge april2017</code></li>
+</ul>
+</li>
+<li>Push all changes to github<ul>
+<li><code>git push origin --all</code></li>
 </ul>
 </li>
 </ul>
 <h2 id="creatingupdating-the-newsletter">Creating/updating the newsletter</h2>
+<ol>
+<li>Create new branch from master</li>
+<li>Update zurb-foundation branch from zurb</li>
+<li>Pull changes from zurb-foundation into new work branch</li>
+<li>Finish the newsletter</li>
+<li>Send newsletter via MailChimp</li>
+<li>Merge work branch to master</li>
+</ol>
+<h2 id="creating-newsletter">Creating newsletter</h2>
 <ul>
 <li>Save word document as text to <strong>newsletter/txt</strong> folder</li>
 <li>Run <code>npm start</code> to run development server </li>
+<li>Edit files in source</li>
 </ul>
                 
                   

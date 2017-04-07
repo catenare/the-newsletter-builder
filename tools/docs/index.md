@@ -38,6 +38,8 @@
 * Save word document as text to **newsletter/txt** folder
 * Run `npm start` to run development server 
 * Edit files in source
+* Run `npm run zip`
+  * Create zip file for MailChimp
 
 ## Additional Resources
 * **tools/snippets.html** - snippets of code I have previously used.

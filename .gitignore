@@ -8,3 +8,4 @@ dist
 config.json
 tools/site
 */img/*.jpg
+.idea/

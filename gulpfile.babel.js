@@ -22,7 +22,7 @@ const EMAIL = yargs.argv.to;
 // Declar var so that both AWS and Litmus task can use it.
 var CONFIG;
 
-// Build the "dist" folder by running all of the above tasks
+// Build the "dist" folder by running all of the below tasks
 gulp.task('build',
   gulp.series(clean, pages, sass, images, inline));
 
@@ -51,7 +51,7 @@ function clean(done) {
 // Compile layouts, pages, and partials into flat HTML files
 // Then parse using Inky templates
 function pages() {
-  return gulp.src('src/pages/**/*.html')
+  return gulp.src(['src/pages/**/*.html', '!src/pages/archive/**/*.html'])
     .pipe(panini({
       root: 'src/pages',
       layouts: 'src/layouts',
@@ -85,7 +85,7 @@ function sass() {
 
 // Copy and compress images
 function images() {
-  return gulp.src('src/assets/img/**/*')
+  return gulp.src(['src/assets/img/**/*', '!src/assets/img/archive/**/*'])
     .pipe($.imagemin())
     .pipe(gulp.dest('./dist/assets/img'));
 }
@@ -219,7 +219,7 @@ function zip() {
     var moveImages = gulp.src(sourcePath)
       .pipe($.htmlSrc({ selector: 'img'}))
       .pipe($.rename(function (path) {
-        path.dirname = fileName + '/' + path.dirname;
+        path.dirname = fileName + path.dirname.replace('dist', '');
         return path;
       }));
 

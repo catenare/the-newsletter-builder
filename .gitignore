@@ -9,3 +9,4 @@ config.json
 tools/site
 */img/*.jpg
 .idea/
+package-lock.json

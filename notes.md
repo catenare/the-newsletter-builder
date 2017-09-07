@@ -14,4 +14,10 @@
 * Running the server
   1. ```npm install``` - install all the modules
   1. ```npm start``` - start the server and open the browser
-  1. ```npm run zip``` - build the zip files. Zip file was in ```dist/index.zip```
+* Package for Mailchimp
+  1. Build *production* code `npm run build`
+  1. Zip manually in Finder and upload to Mailchimp.
+
+  <!-- 1. ```npm run zip``` - build the zip files. Zip file was in ```dist/index.zip``` -->
+* Upload into Mailchimp
+  1. 
